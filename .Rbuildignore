@@ -2,3 +2,4 @@
 ^\.Rproj\.user$
 \.editorconfig
 \.vscode
+^LICENSE\.md$

@@ -23,6 +23,18 @@ install_theme <- function() {
   rstudioapi::applyTheme(rscodeio_theme)
 }
 
+uninstall_theme <- function(){
+
+  ## check if menu theme already in use and deactivate
+  if(file.exists(gnome_theme_dark_backup()) |
+     file.exists(windows_theme_dark_backup())) {
+    deactivate_menu_theme()
+  }
+
+  rstudioapi::removeTheme("rscodeio")
+
+}
+
 
 activate_menu_theme <- function() {
 
@@ -41,10 +53,12 @@ activate_menu_theme <- function() {
   ## replace with RSCodeio Qt themes
   file.copy(from = system.file(fs::path("resources","stylesheets","rstudio-gnome-dark.qss"),
                                package = "rscodeio"),
-            to = gnome_theme_dark())
+            to = gnome_theme_dark(),
+            overwrite = TRUE)
   file.copy(from = system.file(fs::path("resources","stylesheets","rstudio-windows-dark.qss"),
                                package = "rscodeio"),
-            to = windows_theme_dark())
+            to = windows_theme_dark(),
+            overwrite = TRUE)
 }
 
 deactivate_menu_theme <- function(){
@@ -57,7 +71,7 @@ deactivate_menu_theme <- function(){
 
   ## restore dark Qt themes
   file.copy(from = gnome_theme_dark_backup(),
-            to = gnome_theme_dark,
+            to = gnome_theme_dark(),
             overwrite = TRUE)
   file.copy(from = windows_theme_dark_backup(),
             to = windows_theme_dark(),
