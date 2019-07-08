@@ -1,5 +1,5 @@
 <p align=center>
-  <img src="./rscodeio.png" width="480" height="270">
+  <img src="./inst/media/rscodeio.png" width="480" height="270">
 </p>
 
 
