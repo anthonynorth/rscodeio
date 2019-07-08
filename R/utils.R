@@ -1,4 +1,8 @@
 get_rstudio_location <- function(){
+
+  ## This is the likely location for mac.
+  if(host_os_is_mac()) return("/Applications/RStudio.app/Contents")
+
   pandoc_dir <- Sys.getenv("RSTUDIO_PANDOC")
 
   dir_parts <-
