@@ -288,7 +288,7 @@
 }
 
 /* positioning */
-.rstudio-themes-dark > .rstudio-themes-dark > div > div > div:last-child {
+.rstudio-themes-flat > .rstudio-themes-dark > div > div > div:last-child {
   top: 24px !important;
   right: 0 !important;
   bottom: 0 !important;
@@ -468,11 +468,11 @@
   box-shadow: none;
 }
 
-.rstudio-themes-dark .gwt-MenuItem-selected {
+.rstudio-themes-flat .gwt-MenuItem-selected {
   background-color: rgb(9, 71, 113) !important;
 }
 
-.rstudio-themes-dark .gwt-MenuItemSeparator > .menuSeparatorInner {
+.rstudio-themes-flat .gwt-MenuItemSeparator > .menuSeparatorInner {
   border-color: rgba(187, 187, 187, 0.4) !important;
 }
 
