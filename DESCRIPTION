@@ -4,7 +4,7 @@ Version: 0.0.1
 Authors@R: c(person("Anthony", "North", email = "anthony.jl.north@gmail.com", role = c("aut", "cre")),
              person("Miles", "McBain", email = "miles.mcbain@gmail.com", role = "ctb"))
 Description: It really just modifies RStudio presentation.
-Depends: R (>= 3.6.0)
+Depends: R (>= 3.3.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
