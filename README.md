@@ -22,6 +22,8 @@ rscodeio::install_theme()
 
 **note:** On Windows if your RStudio is installed to `Program Files` you will need to run `install_theme()` from within an RStudio sessio that was 'Run as Administrator' since `rscodeio` needs to change files in your installation folder.
 
+Once installed it will automatically be appliled. It can also be selected using the RStudio theme picker in the usual way.
+
 # For best results
 
 - Enable: Tools -> Global Options -> Code -> Display -> Highligh R Function Calls 
