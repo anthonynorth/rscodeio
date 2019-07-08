@@ -1,0 +1,5 @@
+^rscodeio\.Rproj$
+^\.Rproj\.user$
+\.editorconfig
+\.vscode
+^LICENSE\.md$
