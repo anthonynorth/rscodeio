@@ -1,3 +1,11 @@
+#' Install the rscodeio theme
+#'
+#' You'll need RStudio at least 1.2.x and if you're on Windows, and your RStudio
+#' is installed to program files, you'll need to be running RStudio as
+#' Administrator (Just required for install).
+#'
+#' @return nothing.
+#' @export
 install_theme <- function() {
 
   ## check RStudio API available
@@ -23,6 +31,10 @@ install_theme <- function() {
   rstudioapi::applyTheme(rscodeio_theme)
 }
 
+#' Uninstall the rscodeio theme
+#'
+#' @return nothing.
+#' @export
 uninstall_theme <- function(){
 
   ## check if menu theme already in use and deactivate
@@ -36,6 +48,10 @@ uninstall_theme <- function(){
 }
 
 
+#' Activate rscodeio styling in file menu.
+#'
+#' @return nothing.
+#' @export
 activate_menu_theme <- function() {
 
   if(file.exists(gnome_theme_dark_backup()) |
@@ -61,6 +77,10 @@ activate_menu_theme <- function() {
             overwrite = TRUE)
 }
 
+#' Deactivate rscodeio style in file menu.
+#'
+#' @return nothing.
+#' @export
 deactivate_menu_theme <- function(){
 
   if(!file.exists(gnome_theme_dark_backup()) |

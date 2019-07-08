@@ -11,3 +11,4 @@ LazyData: true
 Imports: 
     fs,
     rstudioapi
+RoxygenNote: 6.1.1
