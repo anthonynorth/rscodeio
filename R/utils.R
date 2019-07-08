@@ -24,3 +24,7 @@ windows_theme_dark <- function() {
 windows_theme_dark_backup <- function() {
   fs::path(get_rstudio_location(), "resources", "stylesheets","rstudio-windows-dark-rscodeio-backup.qss")
 }
+
+host_os_is_mac <- function(){
+  Sys.info()["sysname"] == "Darwin"
+}

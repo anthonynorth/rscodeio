@@ -54,6 +54,9 @@ uninstall_theme <- function(){
 #' @export
 activate_menu_theme <- function() {
 
+  ## Styling menus not supported on Mac.
+  if(host_os_is_mac()) return(NULL)
+
   if(file.exists(gnome_theme_dark_backup()) |
      file.exists(windows_theme_dark_backup())) {
       message("RSCodeio menu theme already activated. Deactivate first.")
@@ -82,6 +85,9 @@ activate_menu_theme <- function() {
 #' @return nothing.
 #' @export
 deactivate_menu_theme <- function(){
+
+  ## Styling menus not supported on Mac.
+  if(host_os_is_mac()) return(NULL)
 
   if(!file.exists(gnome_theme_dark_backup()) |
      !file.exists(windows_theme_dark_backup())) {
