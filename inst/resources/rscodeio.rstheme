@@ -287,19 +287,32 @@
   border: none;
 }
 
-/* positioning */
-.rstudio-themes-flat > .rstudio-themes-dark > div > div > div:last-child {
+/* positioning (exclude rstudio server) */
+.rstudio-themes-flat > .rstudio-themes-dark > div > div > div:last-child[style*="top: 29px"] {
+  top: 24px !important;
   right: 0 !important;
-  bottom: -5px !important;
+  bottom: 0 !important;
   left: 0 !important;
-  transform: translateY(-5px);
 }
 
-.rstudio-themes-dark .gwt-SplitLayoutPanel-Workbench {
+.rstudio-themes-flat > .rstudio-themes-dark > div > div > div:last-child[style*="top: 5px"] {
   top: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
   left: 0 !important;
+}
+
+.rstudio-themes-dark :-webkit-any([style*="top: 5px"], [style*="top: 29px"]) .gwt-SplitLayoutPanel-Workbench {
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}
+
+/* rstudio server main menu */
+#rstudio_container > div:nth-child(2) > div > div:nth-child(2) > div > div > table > tbody > tr > td {
+  background-color: var(--toolbar) !important;
+  border-color: var(--toolbar) !important;
 }
 
 /* background */
