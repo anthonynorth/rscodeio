@@ -1,4 +1,8 @@
 get_rstudio_location <- function(){
+
+  ## This is the likely location for mac.
+  if(host_os_is_mac()) return("/Applications/RStudio.app/Contents")
+
   pandoc_dir <- Sys.getenv("RSTUDIO_PANDOC")
 
   dir_parts <-
@@ -23,4 +27,8 @@ windows_theme_dark <- function() {
 
 windows_theme_dark_backup <- function() {
   fs::path(get_rstudio_location(), "resources", "stylesheets","rstudio-windows-dark-rscodeio-backup.qss")
+}
+
+host_os_is_mac <- function(){
+  Sys.info()["sysname"] == "Darwin"
 }
