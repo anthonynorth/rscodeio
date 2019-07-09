@@ -121,7 +121,7 @@
   background-color: #b798bf;
 }
 
-.ace_gutter-cell {
+.ace_gutter-cell:not([style*="top"]) {
   position: relative;
 }
 
@@ -320,26 +320,27 @@
 }
 
 /* window containers */
-.rstudio-themes-dark :-webkit-any(.GD15MCFCKV, .GD15MCFCAS) > div:last-child {
+.rstudio-themes-dark :-webkit-any(.windowframe, .rstheme_minimizedWindowObject) > div:last-child {
   border-radius: 0;
   border: none;
 }
 
 /* main toolbar */
-.rstudio-themes-dark .rstheme_toolbarWrapper.GD15MCFCDP {
+.rstudio-themes-dark > :last-child > div > div > div.rstheme_toolbarWrapper,
+.rstudio-themes-dark [role="application"] > div > .rstheme_toolbarWrapper {
   background-color: var(--toolbar) !important;
   border-color: var(--toolbar) !important;
 }
 
 /* toolbars */
-.rstudio-themes-dark .rstheme_toolbarWrapper:not(.GD15MCFCDP),
+.rstudio-themes-dark .rstheme_toolbarWrapper,
 .rstudio-themes-dark .rstheme_secondaryToolbar {
   background-color: var(--editor-background) !important;
   border-color: var(--editor-background) !important;
 }
 
 /* other toolbars */
-.rstudio-themes-dark .rstudio-themes-background:not(.GD15MCFCC1B) {
+.rstudio-themes-dark .rstudio-themes-background {
   --color: rgb(60, 60, 60);
   background-color: var(--color) !important;
   border-top-color: var(--color) !important;
@@ -348,7 +349,15 @@
 
 /* tabs container */
 .rstudio-themes-dark .gwt-TabLayoutPanelTabs,
-.rstudio-themes-dark :-webkit-any(.rstheme_multiPodUtilityTabArea, .GD15MCFCCS) {
+.rstudio-themes-dark :-webkit-any(.rstheme_multiPodUtilityTabArea, .GD15MCFCCS, .GJQ3LUQCCS),
+.rstudio-themes-dark
+  .windowframe
+  > :last-child
+  > :first-child
+  > :last-child
+  > :first-child
+  > :nth-child(3):nth-last-child(2)
+  > :first-child {
   background: var(--toolbar) !important;
   border-color: var(--toolbar) !important;
 }
@@ -382,7 +391,7 @@
 
 /* datagrid */
 .rstudio-themes-dark .dataGridHeader,
-.rstudio-themes-dark .GD15MCFCBMC,
+.rstudio-themes-dark tr[__gwt_header_row] > :-webkit-any(td, th),
 .rstudio-themes-dark .dataTables_info {
   background-color: rgb(60, 60, 60) !important;
 }
@@ -401,8 +410,8 @@
 }
 
 /* search background */
-.rstudio-themes-dark .rstudio-themes-background.GD15MCFCC1B {
-  background-color: var(--toolbar);
+.rstudio-themes-dark .gwt-TabLayoutPanelContent > div:nth-last-child(2):nth-child(4) .rstudio-themes-background {
+  background-color: var(--toolbar) !important;
 }
 
 /* search input */
@@ -414,7 +423,11 @@
   border: 1px solid transparent;
 }
 
-.rstudio-themes-dark .GD15MCFCC1B .search {
+.rstudio-themes-dark
+  .gwt-TabLayoutPanelContent
+  > div:nth-last-child(2):nth-child(4)
+  .rstudio-themes-background
+  .search {
   height: 18px;
 }
 
