@@ -289,10 +289,10 @@
 
 /* positioning */
 .rstudio-themes-flat > .rstudio-themes-dark > div > div > div:last-child {
-  top: 24px !important;
   right: 0 !important;
-  bottom: 0 !important;
+  bottom: -5px !important;
   left: 0 !important;
+  transform: translateY(-5px);
 }
 
 .rstudio-themes-dark .gwt-SplitLayoutPanel-Workbench {
@@ -332,8 +332,8 @@
 }
 
 /* toolbars */
-.rstheme_toolbarWrapper:not(.GD15MCFCDP),
-.rstheme_secondaryToolbar {
+.rstudio-themes-dark .rstheme_toolbarWrapper:not(.GD15MCFCDP),
+.rstudio-themes-dark .rstheme_secondaryToolbar {
   background-color: var(--editor-background) !important;
   border-color: var(--editor-background) !important;
 }
@@ -348,7 +348,7 @@
 
 /* tabs container */
 .rstudio-themes-dark .gwt-TabLayoutPanelTabs,
-.rstudio-themes-dark .rstheme_multiPodUtilityTabArea {
+.rstudio-themes-dark :-webkit-any(.rstheme_multiPodUtilityTabArea, .GD15MCFCCS) {
   background: var(--toolbar) !important;
   border-color: var(--toolbar) !important;
 }
