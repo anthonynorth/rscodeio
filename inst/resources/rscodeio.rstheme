@@ -360,8 +360,15 @@
   border-bottom-color: var(--color) !important;
 }
 
+/* files breadcrumb gradient */
+.rstudio-themes-dark .breadcrumb > div:last-child {
+  background: var(--editor-background) !important;
+  left: inherit !important;
+}
+
 /* tabs container */
 .rstudio-themes-dark .gwt-TabLayoutPanelTabs,
+/* remove gradients */
 .rstudio-themes-dark :-webkit-any(.rstheme_multiPodUtilityTabArea, .GD15MCFCCS, .GJQ3LUQCCS),
 .rstudio-themes-dark
   .windowframe
@@ -398,7 +405,7 @@
 
 /* editor */
 #rstudio_shell_widget.ace_editor.ace_scroller,
-#rstudio_source_text_editor.ace_editor :-webkit-any(.ace_gutter, .ace_scroller) {
+#rstudio_source_text_editor.ace_editor :-webkit-any(.ace_gutter, .ace_scroller, .ace_scrollbar-v) {
   box-shadow: inset 0 6px 6px -6px black;
 }
 
