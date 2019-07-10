@@ -2,6 +2,10 @@
   <img src="./inst/media/rscodeio.png" width="480" height="270">
 </p>
 
+# rscodeio
+
+An RStudio theme inspired by Visual Studio Code.
+
 # Prerequisites
 
 RStudio 1.2.x or higher.

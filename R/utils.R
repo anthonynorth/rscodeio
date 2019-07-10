@@ -32,3 +32,7 @@ windows_theme_dark_backup <- function() {
 host_os_is_mac <- function(){
   Sys.info()["sysname"] == "Darwin"
 }
+
+rscodeio_installed <- function(){
+ !is.null(rstudioapi::getThemes()$rscodeio)
+}

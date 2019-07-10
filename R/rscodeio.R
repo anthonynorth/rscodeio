@@ -15,10 +15,9 @@ install_theme <- function() {
   if(utils::compareVersion(as.character(rstudioapi::versionInfo()$version), "1.2.0") < 0)
     stop("You need RStudio 1.2 or greater to get theme support")
 
-  ## check if menu theme already in use and deactivate
-  if(file.exists(gnome_theme_dark_backup()) |
-     file.exists(windows_theme_dark_backup())) {
-    deactivate_menu_theme()
+  ## check if menu theme already installed and uninstall
+  if(rscodeio_installed()){
+    uninstall_theme()
   }
 
   ## add the theme
