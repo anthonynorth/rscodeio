@@ -42,7 +42,7 @@
 .rstudio-themes-flat .ace_editor_theme {
   background-color: var(--editor-background);
   color: var(--editor-foreground);
-  font-feature-settings: "liga" off, "calt" off;
+  /* font-feature-settings: "liga" off, "calt" off; */
   line-height: 1.3 !important;
 }
 
@@ -317,18 +317,20 @@
 
 /* background */
 .rstudio-themes-flat > .rstudio-themes-dark {
-  background-color: rgba(var(--editor-background-color), 0.9) !important;
+  background-color: rgb(52, 52, 52) !important;
 }
 
 /* splitters */
 .rstudio-themes-flat > .rstudio-themes-dark .gwt-SplitLayoutPanel-HDragger {
-  background: transparent !important;
+  background: rgb(52, 52, 52) !important;
   cursor: ew-resize;
+  border-color: rgb(52, 52, 52);
 }
 
 .rstudio-themes-flat > .rstudio-themes-dark .gwt-SplitLayoutPanel-VDragger {
-  background: transparent !important;
+  background: rgb(52, 52, 52) !important;
   cursor: ns-resize;
+  border-color: rgb(52, 52, 52);
   /* box-shadow: 0 -1px 0 var(--separator) inset; */
 }
 
@@ -368,6 +370,8 @@
 
 /* tabs container */
 .rstudio-themes-dark .gwt-TabLayoutPanelTabs,
+/* windows */
+.rstudio-themes-dark .windowframe,
 /* remove gradients */
 .rstudio-themes-dark :-webkit-any(.rstheme_multiPodUtilityTabArea, .GD15MCFCCS, .GJQ3LUQCCS),
 .rstudio-themes-dark
