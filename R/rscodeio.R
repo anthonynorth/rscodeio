@@ -36,12 +36,7 @@ install_theme <- function() {
 #' @export
 uninstall_theme <- function(){
 
-  ## check if menu theme already in use and deactivate
-  if(file.exists(gnome_theme_dark_backup()) |
-     file.exists(windows_theme_dark_backup())) {
-    deactivate_menu_theme()
-  }
-
+  deactivate_menu_theme()
   rstudioapi::removeTheme("rscodeio")
 
 }
@@ -90,7 +85,7 @@ deactivate_menu_theme <- function(){
 
   if(!file.exists(gnome_theme_dark_backup()) |
      !file.exists(windows_theme_dark_backup())) {
-    message("RSCodeio theme backups not found. Activate first.")
+    message("RStudio theme backups not found. rscodeio already deactivated?")
     return(FALSE)
   }
 

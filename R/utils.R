@@ -1,32 +1,52 @@
-get_rstudio_location <- function(){
+get_stylesheets_location <- function(){
 
-  ## This is the likely location for mac.
-  if(host_os_is_mac()) return("/Applications/RStudio.app/Contents")
+  ## We shouldn't get here on mac
+  if(host_os_is_mac()) stop("Qss Stylesheets are not used on Mac")
 
-  pandoc_dir <- Sys.getenv("RSTUDIO_PANDOC")
+  rstudio_dirs <- list(
+    pandoc_dir = Sys.getenv("RSTUDIO_PANDOC"),
+    msys_ssh_dir = Sys.getenv("RSTUDIO_MSYS_SSH"),
+    rstudio_win_utils_dir = Sys.getenv("RSTUDIO_WINUTILS")
+  )
 
-  dir_parts <-
-    fs::path_split(pandoc_dir)[[1]]
+  extract_rstudio_path_parts <- function(path){
+    dir_parts <- fs::path_split(path)[[1]]
+    rstudio_ind <- which(dir_parts == "RStudio")
+    if(length(rstudio_ind) == 0) return(NULL)
 
-  bin_ind <- which(dir_parts == "bin")
+    dir_parts[seq(rstudio_ind)]
+  }
 
-  fs::path_join(dir_parts[1:bin_ind-1])
+  potential_paths <-
+    Filter(function(path_parts) {
+           !is.null(path_parts) && dir.exists(fs::path_join(c(path_parts,
+                                              "resources",
+                                              "stylesheets")))
+          },
+          lapply(rstudio_dirs, extract_rstudio_path_parts)
+    )
+
+  if(length(potential_paths) == 0) stop("Could not find location of your RStudio installation.")
+
+  ## return first path that existed
+  fs::path_join(c(potential_paths[[1]], "resources", "stylesheets"))
+
 }
 
 gnome_theme_dark <- function() {
-  fs::path(get_rstudio_location(), "resources", "stylesheets","rstudio-gnome-dark.qss")
+  fs::path(get_stylesheets_location(),"rstudio-gnome-dark.qss")
 }
 
 gnome_theme_dark_backup <- function() {
-  fs::path(get_rstudio_location(), "resources", "stylesheets","rstudio-gnome-dark-rscodeio-backup.qss")
+  fs::path(get_stylesheets_location(), "rstudio-gnome-dark-rscodeio-backup.qss")
 }
 
 windows_theme_dark <- function() {
-  fs::path(get_rstudio_location(), "resources", "stylesheets","rstudio-windows-dark.qss")
+  fs::path(get_stylesheets_location(),"rstudio-windows-dark.qss")
 }
 
 windows_theme_dark_backup <- function() {
-  fs::path(get_rstudio_location(), "resources", "stylesheets","rstudio-windows-dark-rscodeio-backup.qss")
+  fs::path(get_stylesheets_location(),"rstudio-windows-dark-rscodeio-backup.qss")
 }
 
 host_os_is_mac <- function(){
