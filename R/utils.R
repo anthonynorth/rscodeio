@@ -6,13 +6,15 @@ get_stylesheets_location <- function(){
   rstudio_dirs <- list(
     pandoc_dir = Sys.getenv("RSTUDIO_PANDOC"),
     msys_ssh_dir = Sys.getenv("RSTUDIO_MSYS_SSH"),
-    rstudio_win_utils_dir = Sys.getenv("RSTUDIO_WINUTILS")
+    rstudio_win_utils_dir = Sys.getenv("RSTUDIO_WINUTILS"),
+    rs_postback_path = Sys.getenv("RS_RPOSTBACK_PATH"),
+    rmarkdown_mathjax_path = Sys.getenv("RMARKDOWN_MATHJAX_PATH")
   )
 
   extract_rstudio_path_parts <- function(path){
     dir_parts <- fs::path_split(path)[[1]]
-    rstudio_ind <- which(dir_parts == "RStudio")
-    if(length(rstudio_ind) == 0) return(NULL)
+    rstudio_ind <- which(dir_parts %in% c("RStudio","rstudio"))
+    if(length(rstudio_ind) != 1) return(NULL)
 
     dir_parts[seq(rstudio_ind)]
   }
