@@ -1,12 +1,16 @@
 #' Install the rscodeio theme
 #'
-#' You'll need RStudio at least 1.2.x and if you're on Windows, and your RStudio
-#' is installed to program files, you'll need to be running RStudio as
-#' Administrator (Just required for install).
+#' You'll need RStudio at least 1.2.x and if your RStudio
+#' is installed to a default location on Windows or Linux,
+#' you'll need to be running RStudio as
+#' Administrator to install the menu theme files (Just required for install).
 #'
+#' You can elect not to install the menu theme files with `menus = FALSE`.
+#'
+#' @param menus if FALSE do not install the RStudio menu theme qss files.
 #' @return nothing.
 #' @export
-install_theme <- function() {
+install_theme <- function(menus = TRUE) {
 
   ## check RStudio API available
   if(!rstudioapi::isAvailable()) stop("RSCodeio must be installed from within RStudio.")
@@ -25,7 +29,7 @@ install_theme <- function() {
                                                      package = "rscodeio"))
 
   ## add the cusom Qt css
-  activate_menu_theme()
+  if (menus) activate_menu_theme()
 
   rstudioapi::applyTheme(rscodeio_theme)
 }
@@ -48,8 +52,8 @@ uninstall_theme <- function(){
 #' @export
 activate_menu_theme <- function() {
 
-  ## Styling menus not supported on Mac.
-  if(host_os_is_mac()) return(NULL)
+  ## Styling menus not supported on Mac or RStudio Server.
+  if(host_os_is_mac() | is_rstudio_server()) return(NULL)
 
   if(file.exists(gnome_theme_dark_backup()) |
      file.exists(windows_theme_dark_backup())) {

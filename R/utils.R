@@ -51,10 +51,14 @@ windows_theme_dark_backup <- function() {
   fs::path(get_stylesheets_location(),"rstudio-windows-dark-rscodeio-backup.qss")
 }
 
-host_os_is_mac <- function(){
+host_os_is_mac <- function() {
   Sys.info()["sysname"] == "Darwin"
 }
 
-rscodeio_installed <- function(){
+is_rstudio_server <- function() {
+  rstudioapi::versionInfo()$mode == "server"
+}
+
+rscodeio_installed <- function() {
  !is.null(rstudioapi::getThemes()$rscodeio)
 }
