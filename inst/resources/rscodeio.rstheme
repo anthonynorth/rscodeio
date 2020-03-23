@@ -385,7 +385,7 @@
 /* windows */
 .rstudio-themes-dark .windowframe,
 /* remove gradients */
-.rstudio-themes-dark :-webkit-any(.rstheme_multiPodUtilityTabArea, .GD15MCFCCS, .GJQ3LUQCCS) {
+.rstudio-themes-dark :-webkit-any(.rstheme_multiPodUtilityTabArea, .GD15MCFCCS, .GJQ3LUQCCS, .GGBOEFPDDS) {
   background: var(--toolbar) !important;
   border-color: var(--toolbar) !important;
 }
