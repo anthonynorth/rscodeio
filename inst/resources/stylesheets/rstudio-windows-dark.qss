@@ -27,6 +27,11 @@ QMenu::item {
   border: 1px solid rgb(37, 37, 37);
 }
 
+QMenu::item:checked,
+QMenu::item:unchecked {
+  padding-left: 13px;
+}
+
 QMenu::item:disabled {
   color: rgba(204, 204, 204, 0.4);
 }
