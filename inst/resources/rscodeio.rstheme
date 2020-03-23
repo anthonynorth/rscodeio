@@ -370,7 +370,8 @@
 }
 
 /* git status toolbar */
-.rstudio-themes-flat .rstudio-themes-dark .GD15MCFCB2C {
+.rstudio-themes-flat .rstudio-themes-dark .GD15MCFCB2C,
+.rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDC4C {
   background-color: rgb(74, 74, 74) !important;
 }
 
@@ -417,7 +418,7 @@
 
 /* editor */
 #rstudio_shell_widget.ace_editor.ace_scroller,
-#rstudio_source_text_editor.ace_editor
+.ace_editor[id^="rstudio_source_text_editor"]:not(#rstudio_source_text_editor_0)
   :-webkit-any(.ace_gutter, .ace_scroller, .ace_scrollbar-v) {
   box-shadow: inset 0 6px 6px -6px black;
 }
