@@ -4,13 +4,20 @@
 \alias{install_theme}
 \title{Install the rscodeio theme}
 \usage{
-install_theme()
+install_theme(menus = TRUE)
+}
+\arguments{
+\item{menus}{if FALSE do not install the RStudio menu theme qss files.}
 }
 \value{
 nothing.
 }
 \description{
-You'll need RStudio at least 1.2.x and if you're on Windows, and your RStudio
-is installed to program files, you'll need to be running RStudio as
-Administrator (Just required for install).
+You'll need RStudio at least 1.2.x and if your RStudio
+is installed to a default location on Windows or Linux,
+you'll need to be running RStudio as
+Administrator to install the menu theme files (Just required for install).
+}
+\details{
+You can elect not to install the menu theme files with `menus = FALSE`.
 }

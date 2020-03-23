@@ -1,5 +1,8 @@
-^rscodeio\.Rproj$
+# dot-files
+^\..*$
+
+# rstudio
+^.*\.Rproj$
 ^\.Rproj\.user$
-\.editorconfig
-\.vscode
+
 ^LICENSE\.md$
