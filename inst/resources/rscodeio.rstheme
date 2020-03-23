@@ -279,8 +279,14 @@
   color: #f0f0f0;
 }
 
-.rstudio-themes-flat.rstudio-themes-dark-menus .ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line,
-.rstudio-themes-flat.rstudio-themes-dark-menus .ace_editor.ace_autocomplete .ace_marker-layer .ace_line-hover {
+.rstudio-themes-flat.rstudio-themes-dark-menus
+  .ace_editor.ace_autocomplete
+  .ace_marker-layer
+  .ace_active-line,
+.rstudio-themes-flat.rstudio-themes-dark-menus
+  .ace_editor.ace_autocomplete
+  .ace_marker-layer
+  .ace_line-hover {
   background: rgba(255, 255, 255, 0.15);
   border: none;
 }
@@ -311,7 +317,9 @@
 
 /* background */
 .rstudio-themes-flat > .rstudio-themes-dark,
-.rstudio-themes-flat > .rstudio-themes-dark :-webkit-any(.gwt-TabLayoutPanel, .gwt-TabLayoutPanelContent) {
+.rstudio-themes-flat
+  > .rstudio-themes-dark
+  :-webkit-any(.gwt-TabLayoutPanel, .gwt-TabLayoutPanelContent) {
   background: rgb(52, 52, 52) !important;
 }
 
@@ -361,6 +369,11 @@
   border-radius: 0;
 }
 
+/* git status toolbar */
+.rstudio-themes-flat .rstudio-themes-dark .GD15MCFCB2C {
+  background-color: rgb(74, 74, 74) !important;
+}
+
 /* files breadcrumb gradient */
 .rstudio-themes-dark .breadcrumb > div:last-child {
   background: var(--editor-background) !important;
@@ -378,7 +391,9 @@
 }
 
 /* tabs */
-.rstudio-themes-dark .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .rstheme_tabLayoutCenter,
+.rstudio-themes-dark
+  .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected)
+  .rstheme_tabLayoutCenter,
 .rstudio-themes-dark .rstheme_minimizedWindowObject .rstheme_center {
   background-color: var(--tab) !important;
   color: var(--editor-foreground) !important;
@@ -393,14 +408,17 @@
 }
 
 /* active tab */
-.rstudio-themes-dark .gwt-TabLayoutPanelTab.gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter {
+.rstudio-themes-dark
+  .gwt-TabLayoutPanelTab.gwt-TabLayoutPanelTab-selected
+  .rstheme_tabLayoutCenter {
   background-color: var(--selected-tab) !important;
   color: white !important;
 }
 
 /* editor */
 #rstudio_shell_widget.ace_editor.ace_scroller,
-#rstudio_source_text_editor.ace_editor :-webkit-any(.ace_gutter, .ace_scroller, .ace_scrollbar-v) {
+#rstudio_source_text_editor.ace_editor
+  :-webkit-any(.ace_gutter, .ace_scroller, .ace_scrollbar-v) {
   box-shadow: inset 0 6px 6px -6px black;
 }
 
@@ -425,12 +443,17 @@
 }
 
 /* search background */
-.rstudio-themes-dark .gwt-TabLayoutPanelContent > div:nth-last-child(2):nth-child(4) .rstudio-themes-background {
+.rstudio-themes-dark
+  .gwt-TabLayoutPanelContent
+  > div:nth-last-child(2):nth-child(4)
+  .rstudio-themes-background {
   background-color: var(--toolbar) !important;
 }
 
 /* search input */
-.rstudio-themes-dark :-webkit-any(.rstheme_toolbarWrapper, #rstudio_find_replace_bar) .search,
+.rstudio-themes-dark
+  :-webkit-any(.rstheme_toolbarWrapper, #rstudio_find_replace_bar)
+  .search,
 .rstudio-themes-flat .themedPopupPanel .search {
   background-color: rgb(60, 60, 60) !important;
   color: var(--editor-foreground) !important;
@@ -514,12 +537,15 @@
   -ms-user-select: none;
   -webkit-user-select: none;
 }
-.terminal.xterm-cursor-style-block.focus:not(.xterm-cursor-blink-on) .terminal-cursor {
+.terminal.xterm-cursor-style-block.focus:not(.xterm-cursor-blink-on)
+  .terminal-cursor {
   background-color: #d4d4d4;
   color: #1e1e1e;
 }
-.terminal.focus.xterm-cursor-style-bar:not(.xterm-cursor-blink-on) .terminal-cursor::before,
-.terminal.focus.xterm-cursor-style-underline:not(.xterm-cursor-blink-on) .terminal-cursor::before {
+.terminal.focus.xterm-cursor-style-bar:not(.xterm-cursor-blink-on)
+  .terminal-cursor::before,
+.terminal.focus.xterm-cursor-style-underline:not(.xterm-cursor-blink-on)
+  .terminal-cursor::before {
   content: "";
   position: absolute;
   background-color: #d4d4d4;
