@@ -62,4 +62,4 @@ For best results, make sure the following settings are enabled:
 
 # Supported Platforms
 
-`rscodeio` has only been tested on Windows and Pop!\_OS Linux so far. Feedback from other platforms welcome.
+`rscodeio` has only been tested on Windows and Pop!\_OS Linux so far. [Feedback](https://github.com/anthonynorth/rscodeio/issues) from other platforms welcome.
