@@ -47,12 +47,14 @@ And close RStudio. Reopen it in the normal way and the theme should be fully app
 
 Once installed it can also be selected using the RStudio theme picker in the usual way.
 
-# For best results
+# Recommended RStudio settings
 
-- Enable: Tools -> Global Options -> Code -> Display -> Highlight R Function Calls
-- Enable: Tools -> Global Options -> Code -> Display -> Show Syntax Highlighting in Console
-- Enable: Tools -> Global Options -> Code -> Display -> Show Indent Guides
-- Enable: Tools -> Global Options -> Code -> Display -> Highlight Selected Line
+For best results, make sure the following settings are enabled:
+
+- <kbd>Tools</kbd> → <kbd>Global Options…</kbd> → <kbd>Code</kbd> → <kbd>Display</kbd> → **☑ Highlight selected line**
+- <kbd>Tools</kbd> → <kbd>Global Options…</kbd> → <kbd>Code</kbd> → <kbd>Display</kbd> → **☑ Show indent guides**
+- <kbd>Tools</kbd> → <kbd>Global Options…</kbd> → <kbd>Code</kbd> → <kbd>Display</kbd> → **☑ Show syntax highlighting in console input**
+- <kbd>Tools</kbd> → <kbd>Global Options…</kbd> → <kbd>Code</kbd> → <kbd>Display</kbd> → **☑ Highlight R function calls**
 
 # Switching to another theme
 
@@ -60,4 +62,4 @@ Once installed it can also be selected using the RStudio theme picker in the usu
 
 # Supported Platforms
 
-`rscodeio` has only been tested on Windows and Pop!\_OS Linux so far. Feedback from other platforms welcome.
+`rscodeio` has only been tested on Windows and Pop!\_OS Linux so far. [Feedback](https://github.com/anthonynorth/rscodeio/issues) from other platforms welcome.
