@@ -716,9 +716,6 @@
 .xtermBgColor254 { background-color: #e4e4e4; }
 .xtermColor255 { color: #eeeeee !important; }
 .xtermBgColor255 { background-color: #eeeeee; }
-.rstudio-themes-flat.editor_dark.ace_editor_theme a {
-   color: #FFF !important;
-}
 
 .ace_layer {
    z-index: 3;
@@ -979,4 +976,42 @@
 
 .rstudio-themes-flat .gwt-MenuItemSeparator > .menuSeparatorInner {
   border-color: rgba(187, 187, 187, 0.4) !important;
+}
+
+
+/* help pane */
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme p,
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme h1,
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme h2,
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme h3,
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme h4,
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme h5,
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme h6 {
+  line-height: 1.75 !important;
+  color: #DEDEDE !important;
+}
+
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme pre,
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme code {
+  font-family: "Fira Code", Ubuntu, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 85%;
+  color: white !important;
+  background-color: #1A1A1A !important;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 3px;
+}
+
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme code {
+  padding: .2em .4em;
+}
+
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme pre {
+  padding: 1.5em;
+  line-height: 1.45;
+  overflow: auto;
+}
+
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme a {
+  color: #80D7FF !important;
+  text-decoration: none;
 }
