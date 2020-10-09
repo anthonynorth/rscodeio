@@ -7,10 +7,10 @@
 install_theme(menus = TRUE)
 }
 \arguments{
-\item{menus}{if FALSE do not install the RStudio menu theme qss files.}
+\item{menus}{If FALSE, do not install the RStudio menu theme QSS files.}
 }
 \value{
-nothing.
+Nothing.
 }
 \description{
 You'll need RStudio at least 1.2.x and if your RStudio
