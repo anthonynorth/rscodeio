@@ -59,6 +59,6 @@ is_rstudio_server <- function() {
   rstudioapi::versionInfo()$mode == "server"
 }
 
-rscodeio_installed <- function() {
-  !is.null(rstudioapi::getThemes()$rscodeio) || !is.null(rstudioapi::getThemes()$`tomorrow night bright (rscodeio)`)
+is_rscodeio_installed <- function() {
+  !is.null(rstudioapi::getThemes()[["rscodeio"]]) || !is.null(rstudioapi::getThemes()[["tomorrow night bright (rscodeio)"]])
 }

@@ -19,8 +19,8 @@ install_theme <- function(menus = TRUE) {
   if(utils::compareVersion(as.character(rstudioapi::versionInfo()$version), "1.2.0") < 0)
     stop("You need RStudio 1.2 or greater to get theme support")
 
-  ## check if menu theme already installed and uninstall
-  if(rscodeio_installed()){
+  ## check if menu theme is already installed and if so, uninstall first
+  if (is_rscodeio_installed()) {
     uninstall_theme()
   }
 
