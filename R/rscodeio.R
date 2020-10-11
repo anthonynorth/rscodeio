@@ -24,14 +24,18 @@ install_theme <- function(menus = TRUE) {
     uninstall_theme()
   }
 
-  ## add the theme
-  rscodeio_theme <- rstudioapi::addTheme(system.file(fs::path("resources","rscodeio.rstheme"),
-                                                     package = "rscodeio"))
+  ## add the themes
+  rscodeio_default_theme <- rstudioapi::addTheme(fs::path_package(package = "rscodeio",
+                                                                  "resources","rscodeio.rstheme"))
+                                                                  
+  rstudioapi::addTheme(fs::path_package(package = "rscodeio",
+                                        "resources","rscodeio_tomorrow_night_bright.rstheme"))
 
-  ## add the cusom Qt css
+  ## add the custom Qt CSS
   if (menus) activate_menu_theme()
 
-  rstudioapi::applyTheme(rscodeio_theme)
+  ## activate default rscodeio theme
+  rstudioapi::applyTheme(rscodeio_default_theme)
 }
 
 #' Uninstall the rscodeio theme
@@ -41,8 +45,16 @@ install_theme <- function(menus = TRUE) {
 uninstall_theme <- function(){
 
   deactivate_menu_theme()
-  rstudioapi::removeTheme("rscodeio")
-
+  
+  installed_rscodeio_themes <- grep(x = purrr::map_depth(.x = rstudioapi::getThemes(),
+                                                         .depth = 1L,
+                                                         .f = purrr::pluck("name")),
+                                    pattern = "rscodeio",
+                                    value = TRUE)
+  
+  for (theme in installed_rscodeio_themes) {
+    rstudioapi::removeTheme(theme)
+  }
 }
 
 
@@ -105,5 +117,4 @@ deactivate_menu_theme <- function(){
   unlink(gnome_theme_dark_backup())
   unlink(windows_theme_dark_backup())
 
-  }
-
+}
