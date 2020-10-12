@@ -1,11 +1,19 @@
 Package: rscodeio
-Title: A VSCode skin for RStudio
+Title: An RStudio Theme Inspired by Visual Studio Code
 Version: 0.1.0
 Authors@R: c(person("Anthony", "North", email = "anthony.jl.north@gmail.com", role = c("aut", "cre")),
              person("Miles", "McBain", email = "miles.mcbain@gmail.com", role = "ctb"),
              person("Salim", "Brüggemann", email = "salim-b@pm.me", role = c("ctb"), comment = c(ORCID = "0000-0002-5329-5987")))
-Description: It really just modifies RStudio presentation.
 Depends: R (>= 3.3.0)
+Description: This package provides two greyish dark RStudio
+    editor themes which only differ in the syntax highlighting style:
+    while 'rscodeio' offers the colors found in Visual Studio Code,
+    'Tomorrow Night Bright (rscodeio)' combines this package's dark
+    interface theming with the syntax highlighting colors from the
+    similarly named editor theme provided by RStudio. Furthermore, both
+    themes style RStudio's menu, something which is not exposed by the
+    current theming API and therefore requires administrator privileges to
+    replace the relevant QSS files.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
