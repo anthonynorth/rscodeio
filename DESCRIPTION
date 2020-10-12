@@ -1,10 +1,20 @@
 Package: rscodeio
 Title: An RStudio Theme Inspired by Visual Studio Code
 Version: 0.1.0
-Authors@R: c(person("Anthony", "North", email = "anthony.jl.north@gmail.com", role = c("aut", "cre")),
-             person("Miles", "McBain", email = "miles.mcbain@gmail.com", role = "ctb"),
-             person("Salim", "Brüggemann", email = "salim-b@pm.me", role = c("ctb"), comment = c(ORCID = "0000-0002-5329-5987")))
-Depends: R (>= 3.3.0)
+Authors@R: 
+    c(person(given = "Anthony",
+             family = "North",
+             role = c("aut", "cre"),
+             email = "anthony.jl.north@gmail.com"),
+      person(given = "Miles",
+             family = "McBain",
+             role = "ctb",
+             email = "miles.mcbain@gmail.com"),
+      person(given = "Salim",
+             family = "Brüggemann",
+             role = "ctb",
+             email = "salim-b@pm.me",
+             comment = c(ORCID = "0000-0002-5329-5987")))
 Description: This package provides two greyish dark RStudio
     editor themes which only differ in the syntax highlighting style:
     while 'rscodeio' offers the colors found in Visual Studio Code,
@@ -15,10 +25,12 @@ Description: This package provides two greyish dark RStudio
     current theming API and therefore requires administrator privileges to
     replace the relevant QSS files.
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
+Depends: 
+    R (>= 3.3.0)
 Imports: 
     fs,
     purrr,
     rstudioapi
+Encoding: UTF-8
+LazyData: true
 RoxygenNote: 7.1.1
