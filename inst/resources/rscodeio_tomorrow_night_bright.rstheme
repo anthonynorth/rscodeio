@@ -1015,3 +1015,13 @@
   color: #80D7FF !important;
   text-decoration: none;
 }
+
+/* COMMENTED OUT: zebra-striped tables don't look good yet
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme table[summary="Rd table"] tr:nth-child(even) {
+  background-color: #1a1a1a;
+}
+
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme table[summary="Rd table"] td {
+  padding: .2em;
+}
+ */
