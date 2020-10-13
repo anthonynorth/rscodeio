@@ -106,7 +106,7 @@ process_menu_themes <- function(backup_gnome = FALSE,
   path_theme_dark_windows_rscodeio <- fs::path_package(package = "rscodeio",
                                                        "resources", "stylesheets", "rstudio-windows-dark.qss")
 
-  ## interactively ask for administrator privilege credentials on Linux
+  ## interactively ask for administrator credentials on Linux
   if (is_linux()) {
 
     cmd_backup_gnome <- glue::glue('sudo cp "{path_theme_dark_gnome}" "{path_theme_dark_gnome_backup}" ; ')
