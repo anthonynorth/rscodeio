@@ -29,7 +29,9 @@ Depends:
     R (>= 3.3.0)
 Imports: 
     fs,
+    glue,
     purrr,
+    rlang,
     rstudioapi
 Encoding: UTF-8
 LazyData: true
