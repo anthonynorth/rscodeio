@@ -122,12 +122,8 @@ process_menu_themes <- function(backup_gnome = FALSE,
                               if (override_gnome) cmd_override_gnome,
                               if (override_windows) cmd_override_windows,
                               if (restore_gnome) cmd_restore_gnome,
-                              if (restore_windows) cmd_restore_windows)
-    pkexec_cmd_args <- substr(pkexec_cmd_args,
-                              start = 1L,
-                              stop = nchar(pkexec_cmd_args) - 2L)
-    pkexec_cmd_args <- paste0(pkexec_cmd_args, "'")
-
+                              if (restore_windows) cmd_restore_windows,
+                              "'")
 
     return_code <- system2(command = "pkexec",
                            args = pkexec_cmd_args)
