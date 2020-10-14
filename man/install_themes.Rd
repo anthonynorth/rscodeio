@@ -18,8 +18,7 @@ variants can be selected anytime later in RStudio's global options. Variation on
 \item \code{"Tomorrow Night Bright (rscodeio)"} for the colors known from the similarly named default RStudio theme.
 }}
 
-\item{style_menu_bar}{Whether to also install rscodeio's custom QSS files to style RStudio's menu bar. Administrator privileges are required. On macOS and
-RStudio Server, menu bar styling is not necessary and thus always skipped.}
+\item{style_menu_bar}{Whether to also install rscodeio's custom QSS files to style RStudio's menu bar. Administrator privileges are required.}
 
 \item{install_globally}{Whether to install the editor themes for the current user (\code{FALSE}) or all users globally (\code{TRUE}). The latter may require
 administrator privileges.}
