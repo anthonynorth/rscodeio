@@ -1011,7 +1011,9 @@
   overflow: auto;
 }
 
-.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme a {
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme a,
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme p a,
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme p a code {
   color: #80D7FF !important;
   text-decoration: none;
 }
