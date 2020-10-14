@@ -151,19 +151,19 @@ process_menu_themes <- function(backup_gnome = FALSE,
                                      if (restore_windows) path_theme_dark_windows_rscodeio),
                             mode = "write"))) {
 
-      list(c(path_theme_dark_gnome, path_theme_dark_gnome_backup)[backup_gnome],
-           c(path_theme_dark_windows, path_theme_dark_windows_backup)[backup_windows],
-           c(path_theme_dark_gnome_rscodeio, path_theme_dark_gnome)[override_gnome],
-           c(path_theme_dark_windows_rscodeio, path_theme_dark_gnome)[override_windows],
-           c(path_theme_dark_gnome_backup, path_theme_dark_gnome)[restore_gnome],
-           c(path_theme_dark_windows_backup, path_theme_dark_gnome)[restore_windows]) %>%
-        purrr::walk(~ {
-          if (length(.x)) {
-            fs::file_copy(path = .x[1L],
-                          new_path = .x[2L],
-                          overwrite = TRUE)
-          }
-        })
+      purrr::walk(.x = list(c(path_theme_dark_gnome, path_theme_dark_gnome_backup)[backup_gnome],
+                            c(path_theme_dark_windows, path_theme_dark_windows_backup)[backup_windows],
+                            c(path_theme_dark_gnome_rscodeio, path_theme_dark_gnome)[override_gnome],
+                            c(path_theme_dark_windows_rscodeio, path_theme_dark_gnome)[override_windows],
+                            c(path_theme_dark_gnome_backup, path_theme_dark_gnome)[restore_gnome],
+                            c(path_theme_dark_windows_backup, path_theme_dark_gnome)[restore_windows]),
+                  .f = ~ {
+                    if (length(.x)) {
+                      fs::file_copy(path = .x[1L],
+                                    new_path = .x[2L],
+                                    overwrite = TRUE)
+                    }
+                  })
 
       if (restore_gnome) fs::file_delete(path_theme_dark_gnome_backup)
       if (restore_windows) fs::file_delete(path_theme_dark_windows_backup)
