@@ -1,7 +1,7 @@
 QMenuBar {
-  background-color: rgb(60, 60, 60);
+  background-color: rgb(37, 37, 37);
   color: rgb(204, 204, 204);
-  height: 30px;
+  height: 20px;
   font-size: 13px;
 }
 
@@ -15,7 +15,7 @@ QMenuBar::item:selected {
 }
 
 QMenu {
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(62, 62, 62);
   color: rgb(204, 204, 204);
   font-size: 13px;
   padding: 6.5px 0;
@@ -24,7 +24,6 @@ QMenu {
 QMenu::item {
   height: 24px;
   padding: 0 26px;
-  border: 1px solid rgb(37, 37, 37);
 }
 
 QMenu::item:checked,
@@ -37,7 +36,7 @@ QMenu::item:disabled {
 }
 
 QMenu::item:selected {
-  background-color: rgb(9, 71, 113);
+  background-color: rgb(91, 91, 91);
 }
 
 QMenu::item:selected:disabled {
