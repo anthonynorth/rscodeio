@@ -1,7 +1,8 @@
 #' Install rscodeio editor themes and menu bar styling
 #'
-#' RStudio 1.2 or later is required for this. Additionally, administrator privileges are required to also install the Qt CSS (QSS) files to style RStudio's menu
-#' bar, something which is not possible with [RStudio's built-in theming API](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
+#' RStudio 1.2 or later is required for this. Additionally, administrator privileges are required to also install the Qt Style Sheet (QSS) files to style
+#' RStudio's menu bar, something which is not possible with [RStudio's current theming
+#' API](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
 #'
 #' # Menu bar styling
 #'
@@ -9,13 +10,13 @@
 #' [`pkexec`](https://www.freedesktop.org/software/polkit/docs/latest/pkexec.1.html). Windows users must run RStudio as administrator in order to install
 #' rscodeio's menu bar styling. On macOS and RStudio Server, menu bar styling is not necessary and thus always skipped.
 #'
-#' The installation of the menu theme files can be skipped by setting `style_menu_bar = FALSE`. See [install_menu_theme()] for more details about the menu bar
-#' styling.
+#' The installation of the QSS files styling the menu bar can be skipped by setting `style_menu_bar = FALSE`. See [install_menu_theme()] for more details about
+#' the menu bar styling.
 #'
 #' @param apply_theme The rscodeio editor theme variant to apply. All variants are installed and the one specified here is activated right away. The other
-#'   variants can be selected anytime later in RStudio's global options. Variation only affects the syntax highlighting and terminal styling. One of
-#'   - `"rscodeio"` for the default color variant inspired by Visual Studio Code.
-#'   - `"Tomorrow Night Bright (rscodeio)"` for the colors known from the similarly named default RStudio theme.
+#'   variants can be selected anytime later in RStudio's global options. Variation only affects the syntax highlighting and terminal styling. One of -
+#'   `"rscodeio"` for the default color variant inspired by Visual Studio Code. - `"Tomorrow Night Bright (rscodeio)"` for the colors known from the similarly
+#'   named default RStudio theme.
 #' @param style_menu_bar Whether to also install rscodeio's custom QSS files to style RStudio's menu bar. Administrator privileges are required.
 #' @param install_globally Whether to install the editor themes for the current user (`FALSE`) or all users globally (`TRUE`). The latter may require
 #'   administrator privileges.
@@ -47,7 +48,7 @@ install_themes <- function(apply_theme = c("rscodeio",
                                                            "resources", .x),
                                           globally = install_globally))
 
-  # add the custom Qt CSS (QSS)
+  # add the custom QSS files
   if (style_menu_bar) install_menu_theme()
 
   # activate chosen rscodeio editor theme variant
@@ -56,7 +57,7 @@ install_themes <- function(apply_theme = c("rscodeio",
 
 #' Uninstall the rscodeio editor themes and menu bar styling
 #'
-#' To restore RStudio's default _dark_ Qt theme (`.qss`) files (i.e. setting `restore_menu_bar = TRUE`), administrator privileges are required. On Linux, it
+#' To restore RStudio's default _dark_ Qt Style Sheet (QSS) files (i.e. setting `restore_menu_bar = TRUE`), administrator privileges are required. On Linux, it
 #' will be asked interactively for administrator credentials by calling [Polkit](https://en.wikipedia.org/wiki/Polkit)'s
 #' [`pkexec`](https://www.freedesktop.org/software/polkit/docs/latest/pkexec.1.html). Windows users must run RStudio as administrator in order to uninstall
 #' rscodeio's menu bar styling. On macOS and RStudio Server, menu bar styling is not necessary and thus its menu bar restoration will be skipped.
@@ -75,9 +76,10 @@ uninstall_themes <- function(restore_menu_bar = TRUE) {
 
 #' Install rscodeio menu bar styling
 #'
-#' This function overwrites RStudio's default _dark_ Qt theme (`.qss`) files with rscodeio's customized ones in order to properly style RStudio's menu bar which
-#' cannot be altered by [RStudio's current theming API](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html). The original Qt theme files
-#' are backed up and can be restored by calling [uninstall_menu_theme()].
+#' This function overwrites RStudio's default _dark_ [Qt Style Sheet (QSS)](https://doc.qt.io/Qt-5/stylesheet-syntax.html) files with rscodeio's customized ones
+#' in order to properly style RStudio's menu bar which cannot be altered by [RStudio's current theming
+#' API](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html). The original Qt Style Sheet files are backed up and can be restored by
+#' calling [uninstall_menu_theme()].
 #'
 #' Running [`install_themes(style_menu_bar = TRUE)`][install_themes()] (which is the default) has the same effect as running this function.
 #' `install_menu_theme()` can be useful to install the rscodeio menu bar styling _without_ the accompanying editor themes.
@@ -101,7 +103,7 @@ install_menu_theme <- function() {
 
 #' Uninstall rscodeio menu bar styling
 #'
-#' This function restores RStudio's default _dark_ Qt theme (`.qss`) files.
+#' This function restores RStudio's default _dark_ Qt [Qt Style Sheet (QSS)](https://doc.qt.io/Qt-5/stylesheet-syntax.html) files.
 #'
 #' Running [`uninstall_themes(restore_menu_bar = TRUE)`][uninstall_themes()] (which is the default) has the same effect as running this function.
 #' `uninstall_menu_theme()` can be useful to remove the rscodeio menu bar styling _without_ removing the accompanying editor themes.
@@ -129,13 +131,13 @@ uninstall_menu_theme <- function() {
   # shouldn't really happen
   if (exists_theme_dark_gnome_backup && is_rscodeio_menu_theme(path_theme_dark_gnome_backup)) {
 
-    stop("The following backed up file supposed to be an RStudio Qt theme is actually an rscodeio theme:\n", path_theme_dark_gnome_backup, "\n",
-         "Delete the file if you'd like this error to be gone.\nUsing the R console: fs::file_delete(rscodeio:::path_theme_dark_gnome_backup())",
+    stop("The following backed up file supposed to be an unmodified RStudio QSS file is actually an rscodeio QSS file:\n", path_theme_dark_gnome_backup,
+         "\n", "Delete the file if you'd like this error to be gone.\nUsing the R console: fs::file_delete(rscodeio:::path_theme_dark_gnome_backup())",
          call. = FALSE)
   }
   if (exists_theme_dark_windows_backup && is_rscodeio_menu_theme(path_theme_dark_windows_backup)) {
 
-    stop("The following backed up file supposed to be an RStudio Qt theme is actually an rscodeio theme:\n", path_theme_dark_windows_backup, "\n",
+    stop("The following backed up file supposed to be an unmodified RStudio QSS file is actually an rscodeio QSS file:\n", path_theme_dark_windows_backup, "\n",
          "Delete the file if you'd like this error to be gone.\nUsing the R console: fs::file_delete(rscodeio:::path_theme_dark_windows_backup())",
          call. = FALSE)
   }

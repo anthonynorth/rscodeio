@@ -14,7 +14,7 @@ uninstall_themes(restore_menu_bar = TRUE)
 Nothing (\code{NULL} invisibly).
 }
 \description{
-To restore RStudio's default \emph{dark} Qt theme (\code{.qss}) files (i.e. setting \code{restore_menu_bar = TRUE}), administrator privileges are required. On Linux, it
+To restore RStudio's default \emph{dark} Qt Style Sheet (QSS) files (i.e. setting \code{restore_menu_bar = TRUE}), administrator privileges are required. On Linux, it
 will be asked interactively for administrator credentials by calling \href{https://en.wikipedia.org/wiki/Polkit}{Polkit}'s
 \href{https://www.freedesktop.org/software/polkit/docs/latest/pkexec.1.html}{\code{pkexec}}. Windows users must run RStudio as administrator in order to uninstall
 rscodeio's menu bar styling. On macOS and RStudio Server, menu bar styling is not necessary and thus its menu bar restoration will be skipped.

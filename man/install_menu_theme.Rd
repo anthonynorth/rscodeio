@@ -10,9 +10,9 @@ install_menu_theme()
 Nothing (\code{NULL} invisibly).
 }
 \description{
-This function overwrites RStudio's default \emph{dark} Qt theme (\code{.qss}) files with rscodeio's customized ones in order to properly style RStudio's menu bar which
-cannot be altered by \href{https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html}{RStudio's current theming API}. The original Qt theme files
-are backed up and can be restored by calling \code{\link[=uninstall_menu_theme]{uninstall_menu_theme()}}.
+This function overwrites RStudio's default \emph{dark} \href{https://doc.qt.io/Qt-5/stylesheet-syntax.html}{Qt Style Sheet (QSS)} files with rscodeio's customized ones
+in order to properly style RStudio's menu bar which cannot be altered by \href{https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html}{RStudio's current theming API}. The original Qt Style Sheet files are backed up and can be restored by
+calling \code{\link[=uninstall_menu_theme]{uninstall_menu_theme()}}.
 }
 \details{
 Running \code{\link[=install_themes]{install_themes(style_menu_bar = TRUE)}} (which is the default) has the same effect as running this function.

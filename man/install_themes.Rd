@@ -12,11 +12,9 @@ install_themes(
 }
 \arguments{
 \item{apply_theme}{The rscodeio editor theme variant to apply. All variants are installed and the one specified here is activated right away. The other
-variants can be selected anytime later in RStudio's global options. Variation only affects the syntax highlighting and terminal styling. One of
-\itemize{
-\item \code{"rscodeio"} for the default color variant inspired by Visual Studio Code.
-\item \code{"Tomorrow Night Bright (rscodeio)"} for the colors known from the similarly named default RStudio theme.
-}}
+variants can be selected anytime later in RStudio's global options. Variation only affects the syntax highlighting and terminal styling. One of -
+\code{"rscodeio"} for the default color variant inspired by Visual Studio Code. - \code{"Tomorrow Night Bright (rscodeio)"} for the colors known from the similarly
+named default RStudio theme.}
 
 \item{style_menu_bar}{Whether to also install rscodeio's custom QSS files to style RStudio's menu bar. Administrator privileges are required.}
 
@@ -27,15 +25,15 @@ administrator privileges.}
 Nothing (\code{NULL} invisibly).
 }
 \description{
-RStudio 1.2 or later is required for this. Additionally, administrator privileges are required to also install the Qt CSS (QSS) files to style RStudio's menu
-bar, something which is not possible with \href{https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html}{RStudio's built-in theming API}.
+RStudio 1.2 or later is required for this. Additionally, administrator privileges are required to also install the Qt Style Sheet (QSS) files to style
+RStudio's menu bar, something which is not possible with \href{https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html}{RStudio's current theming API}.
 }
 \section{Menu bar styling}{
 On Linux, it will be asked interactively for administrator credentials by calling \href{https://en.wikipedia.org/wiki/Polkit}{Polkit}'s
 \href{https://www.freedesktop.org/software/polkit/docs/latest/pkexec.1.html}{\code{pkexec}}. Windows users must run RStudio as administrator in order to install
 rscodeio's menu bar styling. On macOS and RStudio Server, menu bar styling is not necessary and thus always skipped.
 
-The installation of the menu theme files can be skipped by setting \code{style_menu_bar = FALSE}. See \code{\link[=install_menu_theme]{install_menu_theme()}} for more details about the menu bar
-styling.
+The installation of the QSS files styling the menu bar can be skipped by setting \code{style_menu_bar = FALSE}. See \code{\link[=install_menu_theme]{install_menu_theme()}} for more details about
+the menu bar styling.
 }
 

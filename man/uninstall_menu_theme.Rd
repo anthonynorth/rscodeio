@@ -10,7 +10,7 @@ uninstall_menu_theme()
 Nothing (\code{NULL} invisibly).
 }
 \description{
-This function restores RStudio's default \emph{dark} Qt theme (\code{.qss}) files.
+This function restores RStudio's default \emph{dark} Qt \href{https://doc.qt.io/Qt-5/stylesheet-syntax.html}{Qt Style Sheet (QSS)} files.
 }
 \details{
 Running \code{\link[=uninstall_themes]{uninstall_themes(restore_menu_bar = TRUE)}} (which is the default) has the same effect as running this function.
