@@ -36,7 +36,7 @@ QMenu::item:disabled {
 }
 
 QMenu::item:selected {
-  background-color: rgb(9, 71, 113);
+  background-color: rgb(91, 91, 91);
 }
 
 QMenu::item:selected:disabled {

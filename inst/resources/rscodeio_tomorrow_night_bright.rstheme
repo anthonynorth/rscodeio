@@ -971,7 +971,7 @@
 }
 
 .rstudio-themes-flat .gwt-MenuItem-selected {
-  background-color: rgb(9, 71, 113) !important;
+  background-color: rgb(91, 91, 91) !important;
 }
 
 .rstudio-themes-flat .gwt-MenuItemSeparator > .menuSeparatorInner {
