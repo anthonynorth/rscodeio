@@ -14,9 +14,9 @@
 #' the menu bar styling.
 #'
 #' @param apply_theme The rscodeio editor theme variant to apply. All variants are installed and the one specified here is activated right away. The other
-#'   variants can be selected anytime later in RStudio's global options. Variation only affects the syntax highlighting and terminal styling. One of -
-#'   `"rscodeio"` for the default color variant inspired by Visual Studio Code. - `"Tomorrow Night Bright (rscodeio)"` for the colors known from the similarly
-#'   named default RStudio theme.
+#'   variants can be selected anytime later in RStudio's global options. Variation only affects the syntax highlighting and terminal styling. One of
+#'   - `"rscodeio"` for the default color variant inspired by Visual Studio Code.
+#'   - `"Tomorrow Night Bright (rscodeio)"` for the colors known from the similarly named default RStudio theme.
 #' @param style_menu_bar Whether to also install rscodeio's custom QSS files to style RStudio's menu bar. Administrator privileges are required.
 #' @param install_globally Whether to install the editor themes for the current user (`FALSE`) or all users globally (`TRUE`). The latter may require
 #'   administrator privileges.
