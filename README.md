@@ -87,7 +87,7 @@ For best results, make sure the following settings are enabled:
 
 ### Switching to another theme
 
-As mentioned above, rscodeio provides custom editor theme variants but also styles RStudio's menu bar by modifying some QSS files. This means the RStudio menu
+As mentioned above, rscodeio provides custom editor theme variants but also styles RStudio's menu bar by replacing some QSS files. This means the RStudio menu
 bar will remain dark even if you switch to another editor theme. To revert the menu bar to its default state, **administrator privileges are required**.
 
 To only remove the menu bar styling, run
