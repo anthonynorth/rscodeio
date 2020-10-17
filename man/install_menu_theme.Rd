@@ -21,4 +21,7 @@ Running \code{\link[=install_themes]{install_themes(style_menu_bar = TRUE)}} (wh
 Administrator privileges are required to copy the QSS files to RStudio's installation directory. On Linux, it will be asked interactively for administrator
 credentials by calling \href{https://en.wikipedia.org/wiki/Polkit}{Polkit}'s \href{https://www.freedesktop.org/software/polkit/docs/latest/pkexec.1.html}{\code{pkexec}}.
 Windows users must run RStudio as administrator On macOS and RStudio Server, menu bar styling is not necessary and running this function has no effect.
+
+Note that this function has to be executed again after \emph{every} update or reinstallation of RStudio. This is because the custom QSS files provided by rscodeio
+get overwritten during RStudio's installation process.
 }

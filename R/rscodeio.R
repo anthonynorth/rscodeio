@@ -13,6 +13,9 @@
 #' The installation of the QSS files styling the menu bar can be skipped by setting `style_menu_bar = FALSE`. See [install_menu_theme()] for more details about
 #' the menu bar styling.
 #'
+#' Note that the menu bar styling has to be reapplied after _every_ update or reinstallation of RStudio. This is because the custom QSS files provided by
+#' rscodeio get overwritten during RStudio's installation process.
+#'
 #' @param apply_theme The rscodeio editor theme variant to apply. All variants are installed and the one specified here is activated right away. The other
 #'   variants can be selected anytime later in RStudio's global options. Variation only affects the syntax highlighting and terminal styling. One of
 #'   - `"rscodeio"` for the default color variant inspired by Visual Studio Code.
@@ -87,6 +90,9 @@ uninstall_themes <- function(restore_menu_bar = TRUE) {
 #' Administrator privileges are required to copy the QSS files to RStudio's installation directory. On Linux, it will be asked interactively for administrator
 #' credentials by calling [Polkit](https://en.wikipedia.org/wiki/Polkit)'s [`pkexec`](https://www.freedesktop.org/software/polkit/docs/latest/pkexec.1.html).
 #' Windows users must run RStudio as administrator On macOS and RStudio Server, menu bar styling is not necessary and running this function has no effect.
+#'
+#' Note that this function has to be executed again after _every_ update or reinstallation of RStudio. This is because the custom QSS files provided by rscodeio
+#' get overwritten during RStudio's installation process.
 #'
 #' @return Nothing (`NULL` invisibly).
 #' @export

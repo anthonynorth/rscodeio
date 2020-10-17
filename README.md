@@ -104,6 +104,9 @@ rscodeio::install_menu_theme()
 
 On Windows, for both of the above to work, Rstudio must be run as administrator.
 
+**Note** that the menu bar styling has to be reinstalled after *every* update or reinstallation of RStudio. This is because the custom QSS files provided by
+rscodeio get overwritten during RStudio's installation process.
+
 ### Supported Platforms
 
 `rscodeio` has only been tested on Windows and Linux (Ubuntu and Pop!\_OS Linux) so far. [Feedback](https://github.com/anthonynorth/rscodeio/issues) from other

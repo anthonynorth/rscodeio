@@ -37,5 +37,8 @@ rscodeio's menu bar styling. On macOS and RStudio Server, menu bar styling is no
 
 The installation of the QSS files styling the menu bar can be skipped by setting \code{style_menu_bar = FALSE}. See \code{\link[=install_menu_theme]{install_menu_theme()}} for more details about
 the menu bar styling.
+
+Note that the menu bar styling has to be reapplied after \emph{every} update or reinstallation of RStudio. This is because the custom QSS files provided by
+rscodeio get overwritten during RStudio's installation process.
 }
 
