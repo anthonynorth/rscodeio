@@ -1,6 +1,6 @@
 Package: rscodeio
 Title: An RStudio Theme Inspired by Visual Studio Code
-Version: 0.1.0
+Version: 0.1.9000
 Authors@R: 
     c(person(given = "Anthony",
              family = "North",
