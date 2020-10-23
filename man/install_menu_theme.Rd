@@ -4,7 +4,11 @@
 \alias{install_menu_theme}
 \title{Install rscodeio menu bar styling}
 \usage{
-install_menu_theme()
+install_menu_theme(reload_editor_theme = TRUE)
+}
+\arguments{
+\item{reload_editor_theme}{Whether to reload the editor theme upon installing rscodeio's menu bar styling. This is necessary for the changes to take effect
+immediately. Otherwise, the changes will only become visible after a restart of RStudio.}
 }
 \value{
 Nothing (\code{NULL} invisibly).

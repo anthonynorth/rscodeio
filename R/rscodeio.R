@@ -52,7 +52,7 @@ install_themes <- function(apply_theme = c("rscodeio",
                                           globally = install_globally))
 
   # add the custom QSS files
-  if (style_menu_bar) install_menu_theme()
+  if (style_menu_bar) install_menu_theme(reload_editor_theme = FALSE)
 
   # activate chosen rscodeio editor theme variant
   rstudioapi::applyTheme(rlang::arg_match(apply_theme))
@@ -94,9 +94,11 @@ uninstall_themes <- function(restore_menu_bar = TRUE) {
 #' Note that this function has to be executed again after _every_ update or reinstallation of RStudio. This is because the custom QSS files provided by rscodeio
 #' get overwritten during RStudio's installation process.
 #'
+#' @param reload_editor_theme Whether to reload the editor theme upon installing rscodeio's menu bar styling. This is necessary for the changes to take effect
+#'   immediately. Otherwise, the changes will only become visible after a restart of RStudio.
 #' @return Nothing (`NULL` invisibly).
 #' @export
-install_menu_theme <- function() {
+install_menu_theme <- function(reload_editor_theme = TRUE) {
 
   # menu bar styling is not supported on macOS or RStudio Server
   if (is_macos() || is_rstudio_server()) return(NULL)
@@ -105,6 +107,8 @@ install_menu_theme <- function() {
                       backup_windows = !is_rscodeio_menu_theme(path_theme_dark_windows()),
                       override_gnome = TRUE,
                       override_windows = TRUE)
+
+  if (reload_editor_theme) rstudioapi::applyTheme(rstudioapi::getThemeInfo()$editor)
 }
 
 #' Uninstall rscodeio menu bar styling
