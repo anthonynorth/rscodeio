@@ -453,7 +453,7 @@
 
 /* search input */
 .rstudio-themes-dark
-  :-webkit-any(.rstheme_toolbarWrapper, #rstudio_find_replace_bar)
+  :-webkit-any(.rstheme_toolbarWrapper, [id^="rstudio_find_replace_bar"])
   .search,
 .rstudio-themes-flat .themedPopupPanel .search {
   background-color: rgb(60, 60, 60) !important;
