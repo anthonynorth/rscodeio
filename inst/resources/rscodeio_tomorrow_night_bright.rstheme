@@ -987,28 +987,33 @@
 .rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme h4,
 .rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme h5,
 .rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme h6 {
-  line-height: 1.75 !important;
   color: #DEDEDE !important;
+  line-height: 1.75 !important;
 }
 
-.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme pre,
 .rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme code {
-  font-family: "Fira Code", Ubuntu, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 85%;
-  color: white !important;
-  background-color: #1A1A1A !important;
+  background-color: #1f1f1f !important;
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 3px;
+  font-family: "Fira Code", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 85%;
+  line-height: 2;
+  padding-top: .2em;
+  padding-bottom: .2em;
+  padding-left: .4em;
+  padding-right: .4em;
 }
 
-.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme code {
-  padding: .2em .4em;
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme pre code {
+  border: none;
+  border-radius: 0;
+  line-height: 1.45;
+  padding: 0;
 }
 
 .rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme pre {
-  padding: 1.5em;
-  line-height: 1.45;
   overflow: auto;
+  padding: 1em;
 }
 
 .rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme a,
@@ -1018,12 +1023,12 @@
   text-decoration: none;
 }
 
-/* COMMENTED OUT: zebra-striped tables don't look good yet
-.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme table[summary="Rd table"] tr:nth-child(even) {
-  background-color: #1a1a1a;
+/* COMMENTED OUT: zebra-striped tables; problems: no obvious way to target only desired tables & performance-issues
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme table tr:nth-child(even) {
+  background-color: #1f1f1f;
 }
 
-.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme table[summary="Rd table"] td {
+.rstudio-themes-flat.rstudio-themes-dark.editor_dark.ace_editor_theme table td {
   padding: .2em;
 }
- */
+*/
