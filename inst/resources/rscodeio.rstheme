@@ -370,8 +370,9 @@
 }
 
 /* non-permanent toolbars (package installation hint, history search) */
-.rstudio-themes-dark-grey .GEL-OVUBIED,
-.rstudio-themes-dark-grey .GEL-OVUBFEC {
+.rstudio-themes-dark-grey .GEL-OVUBDEC,
+.rstudio-themes-dark-grey .GEL-OVUBFEC,
+.rstudio-themes-dark-grey .GEL-OVUBIED {
   background-color: rgb(60, 60, 60) !important;
 }
 
