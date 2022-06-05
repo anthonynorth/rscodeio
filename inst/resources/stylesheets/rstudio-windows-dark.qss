@@ -1,3 +1,5 @@
+/* This is rscodeio's dark Windows stylesheet */
+
 QMenuBar {
   background-color: rgb(60, 60, 60);
   color: rgb(204, 204, 204);

@@ -369,6 +369,13 @@
   border-radius: 0;
 }
 
+/* non-permanent toolbars (package installation hint, history search) */
+.rstudio-themes-dark-grey .GEL-OVUBDEC,
+.rstudio-themes-dark-grey .GEL-OVUBFEC,
+.rstudio-themes-dark-grey .GEL-OVUBIED {
+  background-color: rgb(60, 60, 60) !important;
+}
+
 /* git status toolbar */
 .rstudio-themes-flat .rstudio-themes-dark .GD15MCFCB2C,
 .rstudio-themes-flat .rstudio-themes-dark .GGBOEFPDC4C {

@@ -1,0 +1,12 @@
+linters: with_defaults(absolute_path_linter = absolute_path_linter,
+                       implicit_integer_linter = implicit_integer_linter,
+                       line_length_linter = line_length_linter(160),
+                       nonportable_path_linter = nonportable_path_linter,
+                       object_length_linter = lintr::object_length_linter(40),
+                       semicolon_terminator_linter = semicolon_terminator_linter,
+                       todo_comment_linter = todo_comment_linter,
+                       trailing_whitespace_linter = NULL,
+                       T_and_F_symbol_linter = T_and_F_symbol_linter,
+                       undesirable_function_linter = undesirable_function_linter,
+                       undesirable_operator_linter = undesirable_operator_linter(c(lintr:::default_undesirable_operators, `->` = NA)),
+                       unneeded_concatenation_linter = unneeded_concatenation_linter)
