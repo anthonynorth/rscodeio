@@ -111,6 +111,10 @@
 .ace_support.ace_type {
   color: #E7C547
 }
+.ace_scroller {
+  font-variant-ligatures: discretionary-ligatures;
+  font-feature-settings: "dlig", "calt" 1;
+}
 .ace_heading,
 .ace_markup.ace_heading,
 .ace_string {
