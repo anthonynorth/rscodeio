@@ -45,6 +45,11 @@
   line-height: 1.3 !important;
 }
 
+.ace_scroller {
+  font-variant-ligatures: discretionary-ligatures;
+  font-feature-settings: "dlig", "calt" 1;
+}
+
 .ace_cursor {
   border-color: rgb(174, 175, 173);
   width: 2px;
